@@ -138,12 +138,8 @@ class Home {
             
             vanillaVersionsList.innerHTML = ''
             
-            // Add releases section
-            const releasesTitle = document.createElement('div')
-            releasesTitle.innerHTML = '<h3 style="color: var(--element-color); margin: 1rem 0 0.5rem 0;">Versions de sortie</h3>'
-            vanillaVersionsList.appendChild(releasesTitle)
-            
-            const releases = data.versions.filter(v => v.type === 'release').slice(0, 20)
+            // Add all releases (no limit, all versions)
+            const releases = data.versions.filter(v => v.type === 'release')
             releases.forEach(version => {
                 const versionElement = document.createElement('div')
                 versionElement.className = 'version-item'
@@ -153,20 +149,22 @@ class Home {
                 vanillaVersionsList.appendChild(versionElement)
             })
             
-            // Add snapshots section
-            const snapshotsTitle = document.createElement('div')
-            snapshotsTitle.innerHTML = '<h3 style="color: var(--element-color); margin: 1rem 0 0.5rem 0;">Snapshots</h3>'
-            vanillaVersionsList.appendChild(snapshotsTitle)
-            
-            const snapshots = data.versions.filter(v => v.type === 'snapshot').slice(0, 10)
-            snapshots.forEach(version => {
-                const versionElement = document.createElement('div')
-                versionElement.className = 'version-item'
-                versionElement.textContent = version.id
-                versionElement.dataset.version = version.id
-                versionElement.dataset.type = version.type
-                vanillaVersionsList.appendChild(versionElement)
-            })
+            // Add other version types (old_beta, old_alpha) but exclude snapshots
+            const otherVersions = data.versions.filter(v => v.type !== 'release' && v.type !== 'snapshot')
+            if (otherVersions.length > 0) {
+                const otherTitle = document.createElement('div')
+                otherTitle.innerHTML = '<h3 style="color: var(--element-color); margin: 1rem 0 0.5rem 0;">Versions anciennes</h3>'
+                vanillaVersionsList.appendChild(otherTitle)
+                
+                otherVersions.forEach(version => {
+                    const versionElement = document.createElement('div')
+                    versionElement.className = 'version-item'
+                    versionElement.textContent = version.id
+                    versionElement.dataset.version = version.id
+                    versionElement.dataset.type = version.type
+                    vanillaVersionsList.appendChild(versionElement)
+                })
+            }
             
         } catch (error) {
             console.error('Erreur lors du chargement des versions:', error)
@@ -179,12 +177,14 @@ class Home {
         // Close dropdown
         this.closeVanillaDropdown()
         
+        // Store selected version
+        this.selectedVanillaVersion = versionId
+        
         // Update button text to show selected version
         let vanillaBTN = document.querySelector('.vanilla-btn')
         vanillaBTN.innerHTML = `${versionId} <span class="vanilla-arrow icon-arrow"></span>`
         
-        // Start game with selected version
-        await this.startVanillaGameWithVersion(versionId)
+        // Don't start the game immediately - wait for play button click
     }
 
     async startVanillaGameWithVersion(selectedVersion = 'release') {
@@ -209,14 +209,20 @@ class Home {
 
             loader: {
                 type: 'none',
+                build: 'none',
                 enable: false
             },
 
             verify: true,
 
+            ignored: [],
+
             java: {
                 path: configClient.java_config.java_path,
             },
+
+            JVM_ARGS: [],
+            GAME_ARGS: [],
 
             screen: {
                 width: configClient.game_config.screen_size.width,
@@ -538,7 +544,16 @@ class Home {
                 instancePopup.style.display = 'flex'
             }
 
-            if (!e.target.classList.contains('instance-select')) this.startGame()
+            if (!e.target.classList.contains('instance-select')) {
+                // Check if a vanilla version is selected
+                if (this.selectedVanillaVersion) {
+                    // Launch vanilla game with selected version
+                    await this.startVanillaGameWithVersion(this.selectedVanillaVersion)
+                } else {
+                    // Launch normal modded game
+                    this.startGame()
+                }
+            }
         })
 
         instanceCloseBTN.addEventListener('click', () => instancePopup.style.display = 'none')
@@ -550,7 +565,6 @@ class Home {
         let vanillaCloseBTN = document.querySelector('.close-vanilla-popup')
         
         vanillaBTN.addEventListener('click', async (e) => {
-            // Always open popup when clicking on vanilla button or select arrow
             if (!this.vanillaVersionsLoaded) {
                 await this.loadMinecraftVersions()
                 this.vanillaVersionsLoaded = true
@@ -571,12 +585,14 @@ class Home {
                 // Add active class to selected version
                 e.target.classList.add('active-version')
                 
-                // Update vanilla button text
-                document.querySelector('.vanilla-btn').textContent = `Vanilla ${selectedVersion}`
+                // Update vanilla button text to show selected version
+                document.querySelector('.vanilla-btn').textContent = selectedVersion
                 
-                // Close popup and start game
+                // Store selected version for later use
+                this.selectedVanillaVersion = selectedVersion
+                
+                // Close popup
                 vanillaPopup.style.display = 'none'
-                await this.startVanillaGameWithVersion(selectedVersion)
             }
         })
         
@@ -584,8 +600,9 @@ class Home {
             vanillaPopup.style.display = 'none'
         })
         
-        // Initialize vanilla versions loaded flag
+        // Initialize vanilla versions loaded flag and selected version
         this.vanillaVersionsLoaded = false
+        this.selectedVanillaVersion = null
     }
 
     async startGame() {
