@@ -231,7 +231,7 @@ class Home {
 
             memory: {
                 min: `${configClient.java_config.java_memory.min * 1024}M`,
-                max: `${configClient.java_config.java_memory.max * 1024}M`
+                max: `${configClient.java_config.java_memory.max * 1024}M`//ssss
             }
         }
 
