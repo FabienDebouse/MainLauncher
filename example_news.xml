@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
+    <channel>
+        <title>CryoClient - Actualités</title>
+        <description>Les dernières actualités de CryoClient</description>
+        <link>https://pokemoonx.fr</link>
+        <language>fr-FR</language>
+        
+        <!-- Première actualité -->
+        <item>
+            <title>Mise à jour majeure v2.1.3 disponible !</title>
+            <link>https://pokemoonx.fr/news/update-v2-1-3</link>
+            <guid>https://pokemoonx.fr/news/update-v2-1-3</guid>
+            <description>Une nouvelle mise à jour avec de nombreuses améliorations est maintenant disponible.</description>
+            <pubDate>Fri, 20 Dec 2024 10:15:00 +0000</pubDate>
+            <enclosure url="https://pokemoonx.fr/storage/posts/update-banner.png" length="524288" type="image/png"/>
+            <content:encoded><![CDATA[
+                <h2>🎉 Mise à jour v2.1.3 disponible !</h2>
+                <p><strong>CryoClient</strong> vient de recevoir une mise à jour majeure avec de nombreuses améliorations :</p>
+                <ul>
+                    <li>✨ Interface utilisateur repensée</li>
+                    <li>🚀 Performances améliorées de 40%</li>
+                    <li>🔧 Correction de bugs critiques</li>
+                    <li>🌐 Support multilingue étendu</li>
+                </ul>
+                <p>Redémarrez votre launcher pour profiter de ces améliorations !</p>
+            ]]></content:encoded>
+            <dc:creator>Admin CryoClient</dc:creator>
+            <slash:comments>0</slash:comments>
+        </item>
+        
+        <!-- Deuxième actualité -->
+        <item>
+            <title>Nouveau serveur PvP ouvert !</title>
+            <link>https://pokemoonx.fr/news/nouveau-serveur-pvp</link>
+            <guid>https://pokemoonx.fr/news/nouveau-serveur-pvp</guid>
+            <description>Rejoignez notre nouveau serveur PvP pour des combats épiques !</description>
+            <pubDate>Thu, 19 Dec 2024 14:30:00 +0000</pubDate>
+            <enclosure url="https://pokemoonx.fr/storage/posts/pvp-server.png" length="612345" type="image/png"/>
+            <content:encoded><![CDATA[
+                <h2>⚔️ Nouveau serveur PvP !</h2>
+                <p>Nous sommes ravis d'annoncer l'ouverture de notre <strong>nouveau serveur PvP</strong> !</p>
+                <h3>Caractéristiques :</h3>
+                <ul>
+                    <li>🏆 Système de classement compétitif</li>
+                    <li>💎 Récompenses exclusives</li>
+                    <li>🗺️ Nouvelles arènes de combat</li>
+                    <li>👥 Matchmaking équilibré</li>
+                </ul>
+                <p><em>Connectez-vous dès maintenant pour commencer votre aventure PvP !</em></p>
+                <p><a href="https://discord.gg/cryoclient" style="color: #5865F2;">Rejoignez notre Discord</a> pour plus d'informations.</p>
+            ]]></content:encoded>
+            <dc:creator>Équipe PvP</dc:creator>
+            <slash:comments>5</slash:comments>
+        </item>
+        
+        <!-- Troisième actualité -->
+        <item>
+            <title>Événement de Noël 2024 🎄</title>
+            <link>https://pokemoonx.fr/news/evenement-noel-2024</link>
+            <guid>https://pokemoonx.fr/news/evenement-noel-2024</guid>
+            <description>Participez à notre événement de Noël spécial avec des récompenses uniques !</description>
+            <pubDate>Wed, 18 Dec 2024 09:00:00 +0000</pubDate>
+            <enclosure url="https://pokemoonx.fr/storage/posts/christmas-event.png" length="789012" type="image/png"/>
+            <content:encoded><![CDATA[
+                <h2>🎄 Événement de Noël 2024 !</h2>
+                <p>Ho ho ho ! L'<strong>événement de Noël</strong> est arrivé sur CryoClient !</p>
+                <h3>🎁 Récompenses disponibles :</h3>
+                <ul>
+                    <li>🎅 Skin exclusif "Père Noël"</li>
+                    <li>❄️ Effets de particules hivernaux</li>
+                    <li>🦌 Monture renne volant</li>
+                    <li>🍪 Objets cosmétiques festifs</li>
+                </ul>
+                <p><strong>Période :</strong> Du 18 décembre au 2 janvier 2025</p>
+                <p style="background: linear-gradient(45deg, #ff6b6b, #4ecdc4); padding: 10px; border-radius: 5px; color: white;">
+                    <strong>Bonus spécial :</strong> Double XP pendant tout l'événement !
+                </p>
+            ]]></content:encoded>
+            <dc:creator>Équipe Événements</dc:creator>
+            <slash:comments>12</slash:comments>
+        </item>
+    </channel>
+</rss>

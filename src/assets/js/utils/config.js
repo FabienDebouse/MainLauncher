@@ -39,6 +39,10 @@ class Config {
 
     async getNews() {
         let config = await this.GetConfig() || {}
+        
+        console.log('DEBUG: getNews called');
+        console.log('DEBUG: config.rss:', config.rss);
+        console.log('DEBUG: news URL:', news);
 
         if (config.rss) {
             return new Promise((resolve, reject) => {
@@ -50,11 +54,28 @@ class Config {
 
                         if (!Array.isArray(response)) response = [response];
                         for (let item of response) {
+                            console.log('DEBUG: Processing item:', item);
+                            console.log('DEBUG: item.title:', item.title);
+                            console.log('DEBUG: item content:encoded:', item['content:encoded']);
+                            console.log('DEBUG: item dc:creator:', item['dc:creator']);
+                            
+                            // Handle CDATA content properly
+                            let content = '';
+                            if (item['content:encoded']) {
+                                if (item['content:encoded']._cdata) {
+                                    content = item['content:encoded']._cdata;
+                                } else if (item['content:encoded']._text) {
+                                    content = item['content:encoded']._text;
+                                } else if (typeof item['content:encoded'] === 'string') {
+                                    content = item['content:encoded'];
+                                }
+                            }
+                            
                             news.push({
-                                title: item.title._text,
-                                content: item['content:encoded']._text,
-                                author: item['dc:creator']._text,
-                                publish_date: item.pubDate._text
+                                title: item.title?._text || item.title,
+                                content: content,
+                                author: item['dc:creator']?._text || item['dc:creator'],
+                                publish_date: item.pubDate?._text || item.pubDate
                             })
                         }
                         return resolve(news);
@@ -63,11 +84,30 @@ class Config {
                 }).catch(error => reject({ error }))
             })
         } else {
+            console.log('DEBUG: Using JSON news, fetching:', news);
             return new Promise((resolve, reject) => {
-                nodeFetch(news).then(async config => {
-                    if (config.status === 200) return resolve(config.json());
+                nodeFetch(news, {
+                    headers: {
+                        'Accept': 'application/json',
+                        'Accept-Charset': 'utf-8'
+                    }
+                }).then(async config => {
+                    console.log('DEBUG: Response status:', config.status);
+                    if (config.status === 200) {
+                        const text = await config.text();
+                        console.log('DEBUG: Raw text:', text);
+                        try {
+                            const jsonData = JSON.parse(text);
+                            console.log('DEBUG: News data:', jsonData);
+                            return resolve(jsonData);
+                        } catch (parseError) {
+                            console.error('DEBUG: JSON parse error:', parseError);
+                            return reject({ error: parseError });
+                        }
+                    }
                     else return reject({ error: { code: config.statusText, message: 'server not accessible' } });
                 }).catch(error => {
+                    console.error('DEBUG: Error fetching news:', error);
                     return reject({ error });
                 })
             })

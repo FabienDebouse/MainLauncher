@@ -247,6 +247,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .play-instance {
@@ -375,4 +377,33 @@
 
 .active-instance {
     background: var(--element-color);
+}
+
+.vanilla-launcher {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px var(--element-color);
+    border-radius: 10px;
+    height: 2.5rem;
+    width: 100%;
+    max-width: 200px;
+}
+
+.vanilla-btn {
+    border: none;
+    border-radius: 8px;
+    background: none;
+    color: var(--color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.vanilla-btn:hover {
+    background: var(--element-color);
+    color: var(--background);
 }

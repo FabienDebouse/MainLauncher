@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
+    <channel>
+        <title>CryoClient - Actualités</title>
+        <description>Les dernières actualités de CryoClient</description>
+        <link>https://cryoclient.fr</link>
+        <language>fr-FR</language>
+        
+        <!-- Actualité 1 : Recrutement Staff -->
+        <item>
+            <title>Recrutement Staff - Rejoignez l'équipe CryoClient !</title>
+            <link>https://cryoclient.fr/news/recrutement-staff</link>
+            <guid>https://cryoclient.fr/news/recrutement-staff</guid>
+            <description>Rejoignez-nous ! L'équipe CryoClient recrute des personnes motivées.</description>
+            <pubDate>Fri, 20 Dec 2024 15:30:00 +0000</pubDate>
+            <enclosure url="https://cryoclient.fr/storage/posts/recrutement-banner.png" length="660217" type="image/png"/>
+            <content:encoded><![CDATA[
+                <p><span style="color: rgb(53, 152, 219);"><strong>CryoClient</strong></span> est un launcher ayant besoin de personnes <strong>motivées et sérieuses</strong> pouvant le construire et en prendre soin.<br>Aussi, <strong>nous souhaitons recruter</strong> différentes personnes pour que ce projet qui nous tient à cœur soit le plus fidèle à ce que nous espérons de ce launcher !</p>
+                
+                <p>Vous pouvez ainsi retrouver dans le salon 📋 <span style="color: rgb(53, 152, 219);">#🎯│recrutement</span> de notre <a href="https://discord.gg/cryoclient" target="_blank" rel="noopener">Discord</a> les formulaires des différents rôles que nous recherchons actuellement.</p>
+                
+                <h3>🔍 Postes recherchés :</h3>
+                <ul>
+                    <li><strong>Développeurs</strong> - JavaScript, Electron, Node.js</li>
+                    <li><strong>Designers</strong> - UI/UX, graphisme</li>
+                    <li><strong>Modérateurs</strong> - Gestion communauté</li>
+                    <li><strong>Testeurs</strong> - QA, debugging</li>
+                </ul>
+                
+                <p>Sachez que le recrutement ne s'effectuera <strong>qu'au remplissement de ces formulaires</strong>. Toute autre façon de procéder ne sera malheureusement pas pris en compte et vous renverra vers ces formulaires.</p>
+                
+                <p>Merci d'avance de votre compréhension...</p>
+                <p><em>L'équipe CryoClient</em></p>
+            ]]></content:encoded>
+            <dc:creator>AdminCryo</dc:creator>
+            <slash:comments>0</slash:comments>
+        </item>
+        
+        <!-- Actualité 2 : Nouvelle version -->
+        <item>
+            <title>CryoClient v2.2.0 - Révolution du launcher !</title>
+            <link>https://cryoclient.fr/news/version-2-2-0</link>
+            <guid>https://cryoclient.fr/news/version-2-2-0</guid>
+            <description>Une mise à jour révolutionnaire avec de nombreuses nouveautés !</description>
+            <pubDate>Thu, 19 Dec 2024 12:00:00 +0000</pubDate>
+            <enclosure url="https://cryoclient.fr/storage/posts/v2-2-0-banner.png" length="845632" type="image/png"/>
+            <content:encoded><![CDATA[
+                <p><span style="color: rgb(53, 152, 219);"><strong>CryoClient v2.2.0</strong></span> est maintenant disponible ! Cette version apporte des <strong>améliorations majeures</strong> qui vont révolutionner votre expérience de jeu.</p>
+                
+                <h3>🚀 Nouveautés principales :</h3>
+                <ul>
+                    <li><strong>Interface repensée</strong> - Design moderne et intuitif</li>
+                    <li><strong>Système de mods intégré</strong> - Installation automatique</li>
+                    <li><strong>Optimisations performances</strong> - +60% de vitesse</li>
+                    <li><strong>Multi-profils</strong> - Gérez plusieurs configurations</li>
+                    <li><strong>Thèmes personnalisables</strong> - Mode sombre/clair</li>
+                </ul>
+                
+                <p style="background: linear-gradient(45deg, #667eea, #764ba2); padding: 15px; border-radius: 8px; color: white; text-align: center;">
+                    <strong>🎉 Mise à jour automatique disponible !</strong><br>
+                    Redémarrez votre launcher pour profiter des nouveautés
+                </p>
+                
+                <p>Cette version marque un <strong>tournant majeur</strong> dans l'évolution de CryoClient. Nous avons écouté vos retours et implémenté les fonctionnalités les plus demandées.</p>
+                
+                <p>Retrouvez le <a href="https://cryoclient.fr/changelog" target="_blank" style="color: rgb(53, 152, 219);">changelog complet</a> sur notre site officiel.</p>
+                
+                <p><em>Merci pour votre fidélité !</em><br>L'équipe de développement</p>
+            ]]></content:encoded>
+            <dc:creator>DevTeam</dc:creator>
+            <slash:comments>15</slash:comments>
+        </item>
+        
+        <!-- Actualité 3 : Événement communautaire -->
+        <item>
+            <title>Concours de création - Gagnez des récompenses exclusives !</title>
+            <link>https://cryoclient.fr/news/concours-creation</link>
+            <guid>https://cryoclient.fr/news/concours-creation</guid>
+            <description>Participez à notre concours de création et remportez des prix exceptionnels !</description>
+            <pubDate>Wed, 18 Dec 2024 10:15:00 +0000</pubDate>
+            <enclosure url="https://cryoclient.fr/storage/posts/concours-banner.png" length="723456" type="image/png"/>
+            <content:encoded><![CDATA[
+                <p><span style="color: rgb(53, 152, 219);"><strong>CryoClient</strong></span> lance son premier <strong>concours de création communautaire</strong> ! Montrez votre talent et remportez des récompenses exceptionnelles.</p>
+                
+                <h3>🎨 Catégories du concours :</h3>
+                <ul>
+                    <li><strong>Thèmes personnalisés</strong> - Créez le thème parfait</li>
+                    <li><strong>Logos & Artwork</strong> - Votre vision artistique</li>
+                    <li><strong>Plugins utiles</strong> - Améliorez l'expérience</li>
+                    <li><strong>Vidéos promotionnelles</strong> - Faites connaître CryoClient</li>
+                </ul>
+                
+                <h3>🏆 Récompenses :</h3>
+                <div style="background: linear-gradient(135deg, #ffeaa7, #fab1a0); padding: 15px; border-radius: 10px; margin: 10px 0;">
+                    <p><strong>🥇 1er prix :</strong> 100€ + Badge exclusif + Mention spéciale</p>
+                    <p><strong>🥈 2ème prix :</strong> 50€ + Badge exclusif</p>
+                    <p><strong>🥉 3ème prix :</strong> 25€ + Badge exclusif</p>
+                </div>
+                
+                <p><strong>📅 Dates importantes :</strong></p>
+                <ul>
+                    <li>Début des soumissions : 18 décembre 2024</li>
+                    <li>Fin des soumissions : 15 janvier 2025</li>
+                    <li>Annonce des résultats : 22 janvier 2025</li>
+                </ul>
+                
+                <p>Pour participer, rejoignez notre <a href="https://discord.gg/cryoclient" target="_blank" style="color: rgb(53, 152, 219);">Discord</a> et consultez le salon <span style="color: rgb(53, 152, 219);">#🎨│concours</span> pour tous les détails !</p>
+                
+                <p style="text-align: center; font-style: italic;">Bonne chance à tous les participants ! 🍀</p>
+            ]]></content:encoded>
+            <dc:creator>CommunityManager</dc:creator>
+            <slash:comments>8</slash:comments>
+        </item>
+        
+        <!-- Actualité 4 : Maintenance programmée -->
+        <item>
+            <title>Maintenance programmée - Améliorations serveur</title>
+            <link>https://cryoclient.fr/news/maintenance-serveur</link>
+            <guid>https://cryoclient.fr/news/maintenance-serveur</guid>
+            <description>Maintenance programmée pour améliorer les performances de nos serveurs.</description>
+            <pubDate>Tue, 17 Dec 2024 08:00:00 +0000</pubDate>
+            <enclosure url="https://cryoclient.fr/storage/posts/maintenance-banner.png" length="456789" type="image/png"/>
+            <content:encoded><![CDATA[
+                <p><span style="color: rgb(53, 152, 219);"><strong>CryoClient</strong></span> effectuera une <strong>maintenance programmée</strong> de ses serveurs pour vous offrir une expérience encore meilleure.</p>
+                
+                <div style="background: #ff7675; color: white; padding: 15px; border-radius: 8px; text-align: center; margin: 15px 0;">
+                    <h3>⚠️ MAINTENANCE PROGRAMMÉE</h3>
+                    <p><strong>Date :</strong> Samedi 21 décembre 2024</p>
+                    <p><strong>Horaire :</strong> 02h00 - 06h00 (UTC+1)</p>
+                    <p><strong>Durée estimée :</strong> 4 heures</p>
+                </div>
+                
+                <h3>🔧 Améliorations prévues :</h3>
+                <ul>
+                    <li><strong>Optimisation serveurs</strong> - Réduction de la latence</li>
+                    <li><strong>Mise à jour sécurité</strong> - Protection renforcée</li>
+                    <li><strong>Augmentation capacité</strong> - Support de plus d'utilisateurs</li>
+                    <li><strong>Correction bugs</strong> - Stabilité améliorée</li>
+                </ul>
+                
+                <p><strong>📱 Pendant la maintenance :</strong></p>
+                <ul>
+                    <li>Le launcher sera temporairement indisponible</li>
+                    <li>Les téléchargements seront interrompus</li>
+                    <li>L'authentification ne fonctionnera pas</li>
+                </ul>
+                
+                <p style="background: #00b894; color: white; padding: 10px; border-radius: 5px;">
+                    <strong>💡 Conseil :</strong> Planifiez vos sessions de jeu en conséquence !
+                </p>
+                
+                <p>Nous nous excusons pour la gêne occasionnée et vous remercions de votre compréhension.</p>
+                
+                <p><em>L'équipe technique CryoClient</em></p>
+            ]]></content:encoded>
+            <dc:creator>TechTeam</dc:creator>
+            <slash:comments>3</slash:comments>
+        </item>
+    </channel>
+</rss>
